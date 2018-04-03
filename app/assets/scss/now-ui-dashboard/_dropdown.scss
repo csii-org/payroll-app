@@ -11,6 +11,10 @@
             right: 10px;
         }
     }
+    &.dropdown-menu-right{
+        left: auto !important;
+        right: 0 !important;
+    }
 
     i{
         margin-right: 5px;
@@ -79,11 +83,6 @@
         border-bottom: .4em solid;
         border-right: .4em solid transparent;
         border-left: .4em solid transparent;
-    }
-
-    &.dropdown-menu-right{
-      right: 0 !important;
-      left: auto !important;
     }
 
     .dropdown-item,
@@ -203,4 +202,7 @@
             display: none;
         }
     }
+}
+.dropdown{
+    display: inline-block;
 }

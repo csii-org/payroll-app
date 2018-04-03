@@ -1,5 +1,34 @@
 @include form-control-placeholder($medium-gray, 1);
 
+.input-group-addon.form-control-lg, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .input-group-addon.btn{
+    border-radius: 30px;
+    transition: color .3s ease-in-out,border-color .3s ease-in-out,background-color .3s ease-in-out;
+}
+
+.input-group-addon:not(:last-child).form-control-lg, .input-group-lg > .input-group-addon:not(:last-child), .input-group-lg > .input-group-btn > .input-group-addon:not(:last-child).btn{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group-addon:last-child.form-control-lg, .input-group-lg > .input-group-addon:last-child, .input-group-lg > .input-group-btn > .input-group-addon:last-child.btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn{
+    border-radius: 30px;
+    transition: color .3s ease-in-out,border-color .3s ease-in-out,background-color .3s ease-in-out;
+}
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+.input-group-lg > .form-control{
+    font-size: .8571em;
+    line-height: 1.25;
+}
+
 .form-control {
     background-color: $transparent-bg;
     border: 1px solid $light-gray;
@@ -96,7 +125,8 @@
         font-size: 11px;
     }
 
-    &.form-control-lg{
+    &.form-control-lg,
+    &.input-group-lg{
         &:after{
             font-size: 13px;
             top: 24px;
@@ -326,7 +356,7 @@ textarea.form-control{
     font-size: $font-size-small;
 }
 
-.form-control-lg{
+.form-control-lg,.input-group-lg{
     padding: 0;
     font-size: inherit;
     line-height: 0;

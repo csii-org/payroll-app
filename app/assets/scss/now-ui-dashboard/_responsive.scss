@@ -1,4 +1,7 @@
 @media screen and (max-width: 991px){
+    .sweet-alert {
+        top: 25% !important;
+    }
     .profile-photo .profile-photo-small{
         margin-left: -2px;
     }
@@ -25,6 +28,9 @@
         }
 
         .navbar-nav{
+            .dropdown-menu {
+                position: static !important;
+            }
             .nav-item:first-child{
               margin-top: 10px;
             }
@@ -35,7 +41,6 @@
 
         .dropdown.show .dropdown-menu{
             display: block;
-            position: static!important;
         }
 
         .dropdown .dropdown-menu{
@@ -249,17 +254,21 @@
 
         @include transform-translate-x(-260px);
     }
-
-
-
     .main-panel{
         width: 100%;
     }
 }
 
 @media screen and (min-width: 992px){
+    .dropdown-menu-right{
+        left: auto !important;
+    }
     .navbar-collapse{
         background: none !important;
+    }
+
+    .table-responsive {
+        overflow: scroll;
     }
 
     .navbar .navbar-toggle{
@@ -315,8 +324,8 @@
   }
 
   .main-panel .content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
     .footer{

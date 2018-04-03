@@ -104,32 +104,25 @@ p{
     font-size: $font-size-h6;
 }
 
-.text-primary,
-a.text-primary:focus, a.text-primary:hover {
+.text-primary {
   color: $brand-primary !important;
 }
-.text-info,
-a.text-info:focus, a.text-info:hover {
+.text-info {
   color: $brand-info !important;
 }
-.text-success,
-a.text-success:focus, a.text-success:hover {
+.text-success {
   color: $brand-success !important;
 }
-.text-warning,
-a.text-warning:focus, a.text-warning:hover {
+.text-warning {
   color: $brand-warning !important;
 }
-.text-danger,
-a.text-danger:focus, a.text-danger:hover {
+.text-danger {
   color: $brand-danger !important;
 }
 
-.text-gray,
-a.text-gray:focus, a.text-gray:hover{
+.text-gray{
     color: $light-gray !important;
 }
-
 
 .blockquote{
     border-left: none;

@@ -3,19 +3,19 @@
 }
 
 @mixin form-control-placeholder($color, $opacity){
-   .form-control::-moz-placeholder{
+   .form-control:not([disabled])::-moz-placeholder{
        color: $color;
        @include opacity(1);
    }
-   .form-control:-moz-placeholder{
+   .form-control:not([disabled]):-moz-placeholder{
        color: $color;
        @include opacity(1);
    }
-   .form-control::-webkit-input-placeholder{
+   .form-control:not([disabled])::-webkit-input-placeholder{
        color: $color;
        @include opacity(1);
    }
-   .form-control:-ms-input-placeholder{
+   .form-control:not([disabled]):-ms-input-placeholder{
        color: $color;
        @include opacity(1);
    }
@@ -38,7 +38,8 @@
 
 @mixin form-control-lg-padding($padding-vertical, $padding-horizontal) {
     .form-group.no-border.form-control-lg,
-    .input-group.no-border.form-control-lg{
+    .input-group.no-border.form-control-lg,
+    .input-group.no-border.input-group-lg{
         .input-group-addon{
             padding: $padding-vertical 0 $padding-vertical $padding-horizontal;
         }
@@ -53,7 +54,8 @@
     }
 
     .form-group.form-control-lg,
-    .input-group.form-control-lg{
+    .input-group.form-control-lg,
+    .input-group.input-group-lg{
         .form-control{
             padding: $padding-vertical - 1 $padding-horizontal - 1;
 

@@ -10,6 +10,15 @@ body{
     position: relative;
     background: $white-color;
 }
+
+/* Cursor pointer for React */
+.nav-pills .nav-link,
+.nav-tabs .nav-link,
+a[data-toggle="collapse"]{
+    cursor: pointer;
+}
+
+
 /* Animations */
 .nav-pills .nav-link,
 .navbar,
