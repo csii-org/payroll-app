@@ -9,7 +9,7 @@ describe('<NotFoundPage />', () => {
       <NotFoundPage />
     );
     expect(renderedComponent.contains(
-      'This is NotFoundPage component!'
+      'Sorry, page not found!'
     )).toEqual(true);
   });
 });

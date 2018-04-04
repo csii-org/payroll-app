@@ -14,9 +14,9 @@ import React from 'react';
 export default class NotFound extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        This is NotFoundPage component!
-      </h1>
+      <h3>
+        Sorry, page not found!
+      </h3>
     );
   }
 }
