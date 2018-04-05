@@ -10,37 +10,33 @@
  */
 
 import React from 'react';
-import {
-  Card, CardHeader, CardTitle, CardBody, CardFooter, CardLink,
-  Container, Col, Form
-} from 'reactstrap';
+import { Card, CardHeader, CardTitle, CardBody, CardFooter, CardLink, Container, Col, Form } from 'reactstrap';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import { Button, FormInputs } from 'components';
 
 import bgImage from 'assets/img/bg14.jpg';
 
-var ps;
-
 export default class LoginPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.state = {};
+    this.fullPages = React.createRef();
   }
   componentDidMount() {
     if (navigator.platform.indexOf('Win') > -1) {
-      ps = new PerfectScrollbar(this.refs.fullPages);
+      this.ps = new PerfectScrollbar(this.fullPages);
     }
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf('Win') > -1) {
-      ps.destroy();
+      this.ps.destroy();
     }
   }
   render() {
     return (
       <div>
-        <div className="wrapper wrapper-full-page" ref="fullPages">
+        <div className="wrapper wrapper-full-page" ref={this.fullPages}>
           <div className="full-page section-image">
             <div className="full-page-content">
               <div className="login-page">
@@ -53,20 +49,20 @@ export default class LoginPage extends React.Component { // eslint-disable-line 
                       <CardBody>
                         <Form>
                           <FormInputs
-                            ncols={["col-12", "col-12"]}
+                            ncols={['col-12', 'col-12']}
                             proprieties={[
                               {
-                                label: "Username",
+                                label: 'Username',
                                 inputProps: {
-                                  type: "text"
-                                }
+                                  type: 'text',
+                                },
                               },
                               {
-                                label: "Password",
+                                label: 'Password',
                                 inputProps: {
-                                  type: "password"
-                                }
-                              }
+                                  type: 'password',
+                                },
+                              },
                             ]}
                           />
                         </Form>

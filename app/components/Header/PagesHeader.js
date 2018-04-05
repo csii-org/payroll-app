@@ -6,7 +6,7 @@ import {
 
 //import pagesRoutes from 'routes/pages.jsx';
 
-class PagesHeader extends React.Component{
+class PagesHeader extends React.Component { // eslint-disable-line react/prefer-stateless-function
     constructor(props) {
         super(props);
         this.state = {
@@ -24,9 +24,9 @@ class PagesHeader extends React.Component{
     activeRoute(routeName) {
         return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : '';
     }
-    render(){
+    render() {
         return (
-            <Navbar expand="lg" className={this.state.isOpen ? "bg-white navbar-absolute":"navbar-transparent navbar-absolute"}>
+            <Navbar expand="lg" className={this.state.isOpen ? "bg-white navbar-absolute" : "navbar-transparent navbar-absolute"}>
                 <Container>
                     <div className="navbar-wrapper">
                         <div className="navbar-toggle">

@@ -3,8 +3,8 @@ import { FormGroup, Label, Input } from 'reactstrap';
 // used for making the prop types of this component
 import PropTypes from 'prop-types';
 
-class SimpleCheckbox extends React.Component{
-    render(){
+class SimpleCheckbox extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         return (
             <FormGroup check {...this.props.formGroupProps}>
                 <Label check {...this.props.labelProps}>

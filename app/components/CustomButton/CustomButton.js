@@ -6,13 +6,13 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 
-class CustomButton extends Component {
+class CustomButton extends Component { // eslint-disable-line react/prefer-stateless-function
     render() {
         const {
             simple, round, icon, neutral, iconMini, leftLabel, rightLabel, wd, className,
             twitter, facebook, google, linkedin, pinterest, youtube, tumblr, github, behance, dribbble, reddit, stumbleupon,
-             ...rest
-         } = this.props;
+            ...rest
+        } = this.props;
 
         var btnClasses = cx({
             'btn-simple': simple,
@@ -35,15 +35,15 @@ class CustomButton extends Component {
             'btn-stumbleupon': stumbleupon
         });
 
-        if(className !== undefined){
-            btnClasses += " "+className;
+        if (className !== undefined) {
+            btnClasses += " " + className;
         }
 
         return (
             <Button className={btnClasses} {...rest}>
-                {leftLabel ? (<span className="btn-label"><i className={leftLabel}></i> </span>):null}
+                {leftLabel ? (<span className="btn-label"><i className={leftLabel}></i> </span>) : null}
                 {this.props.children}
-                {rightLabel ? (<span className="btn-label btn-label-right"><i className={rightLabel}></i> </span>):null}
+                {rightLabel ? (<span className="btn-label btn-label-right"><i className={rightLabel}></i> </span>) : null}
             </Button>
         );
     }

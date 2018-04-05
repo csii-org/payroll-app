@@ -5,28 +5,28 @@ import PropTypes from 'prop-types';
 
 import { Button, Checkbox } from 'components';
 
-class Task extends React.Component{
-    render(){
+class Task extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         var tasksList = [];
         var number;
         var edit;
         var remove;
         for (var i = 0; i < this.props.tasks.length; i++) {
-            number = "checkbox"+i;
-            edit = "edit"+i;
-            remove = "remove"+i;
+            number = "checkbox" + i;
+            edit = "edit" + i;
+            remove = "remove" + i;
             tasksList.push(
                 <tr key={i}>
                     <td>
-                        <Checkbox inputProps={{value: number, defaultChecked: this.props.tasks[i].checked}}/>
+                        <Checkbox inputProps={{ value: number, defaultChecked: this.props.tasks[i].checked }} />
                     </td>
                     <td className="img-row">
                         <div className="img-wrapper img-raised">
-                            <img src={ this.props.tasks[i].image } alt="..." />
+                            <img src={this.props.tasks[i].image} alt="..." />
                         </div>
                     </td>
                     <td className="text-left">
-                        { this.props.tasks[i].text }
+                        {this.props.tasks[i].text}
                     </td>
                     <td className="td-actions text-right">
                         <Button
@@ -53,7 +53,7 @@ class Task extends React.Component{
             <div className="table-full-width table-responsive">
                 <table className="table">
                     <tbody>
-                        { tasksList }
+                        {tasksList}
                     </tbody>
                 </table>
             </div>

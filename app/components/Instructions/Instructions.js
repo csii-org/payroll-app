@@ -3,19 +3,19 @@ import { Row, Col } from 'reactstrap';
 // used for making the prop types of this component
 import PropTypes from 'prop-types';
 
-class Instructions extends React.Component{
-    render(){
+class Instructions extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         return (
             <div className="instruction">
                 <Row>
                     <Col md={8} xs={12}>
-                         {this.props.title !== undefined ? (<strong>{this.props.title}</strong>):null}
-                         {this.props.description  !== undefined ? (<p className="description">{this.props.description}</p>):null}
+                        {this.props.title !== undefined ? (<strong>{this.props.title}</strong>) : null}
+                        {this.props.description !== undefined ? (<p className="description">{this.props.description}</p>) : null}
                     </Col>
                     <Col md={4} xs={12}>
-                         {this.props.img !== undefined ? (<div className="picture">
+                        {this.props.img !== undefined ? (<div className="picture">
                             <img src={this.props.img} alt={this.props.imgAlt} className="rounded img-raised" />
-                        </div>):null}
+                        </div>) : null}
                     </Col>
                 </Row>
             </div>

@@ -3,13 +3,13 @@ import { Container } from 'reactstrap';
 // used for making the prop types of this component
 import PropTypes from 'prop-types';
 
-class Footer extends React.Component{
-    render(){
+class Footer extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         return (
             <footer className={"footer"
-                + (this.props.default ? " footer-default":"")
+                + (this.props.default ? " footer-default" : "")
             }>
-                <Container fluid={this.props.fluid ? true:false}>
+                <Container fluid={this.props.fluid ? true : false}>
                     <nav>
                         <ul>
                             <li>
@@ -19,12 +19,12 @@ class Footer extends React.Component{
                             </li>
                             <li>
                                 <a href="https://presentation.creative-tim.com">
-                                   About Us
+                                    About Us
                                 </a>
                             </li>
                             <li>
                                 <a href="https://blog.creative-tim.com">
-                                   Blog
+                                    Blog
                                 </a>
                             </li>
                         </ul>

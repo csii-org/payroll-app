@@ -8,7 +8,7 @@ import {
 
 //import dashboardRoutes from 'routes/dashboard.jsx';
 
-class Header extends React.Component{
+class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,7 @@ class Header extends React.Component{
         this.dropdownToggle = this.dropdownToggle.bind(this);
     }
     toggle() {
-        if(this.state.isOpen){
+        if (this.state.isOpen) {
             this.setState({
                 color: "transparent"
             });
@@ -33,12 +33,12 @@ class Header extends React.Component{
             isOpen: !this.state.isOpen
         });
     }
-    dropdownToggle(e){
+    dropdownToggle(e) {
         this.setState({
             dropdownOpen: !this.state.dropdownOpen
         });
     }
-    getBrand(){
+    getBrand() {
         /*var name;
         dashboardRoutes.map((prop,key) => {
             if(prop.collapse){
@@ -64,13 +64,13 @@ class Header extends React.Component{
         return name;*/
         return "Dashboard";
     }
-    openSidebar(){
+    openSidebar() {
         document.documentElement.classList.toggle('nav-open');
         this.refs.sidebarToggle.classList.toggle('toggled');
     }
     // function that adds color white/transparent to the navbar on resize (this is for the collapse)
-    updateColor(){
-        if(window.innerWidth < 993 && this.state.isOpen){
+    updateColor() {
+        if (window.innerWidth < 993 && this.state.isOpen) {
             this.setState({
                 color: "white"
             });
@@ -81,23 +81,23 @@ class Header extends React.Component{
         }
 
     }
-    componentDidMount(){
+    componentDidMount() {
         window.addEventListener("resize", this.updateColor.bind(this));
     }
-    componentDidUpdate(e){
-        if(window.innerWidth < 993 && e.history.location.pathname !== e.location.pathname && document.documentElement.className.indexOf('nav-open') !== -1){
+    componentDidUpdate(e) {
+        if (window.innerWidth < 993 && e.history.location.pathname !== e.location.pathname && document.documentElement.className.indexOf('nav-open') !== -1) {
             document.documentElement.classList.toggle('nav-open');
             this.refs.sidebarToggle.classList.toggle('toggled');
         }
     }
-    render(){
+    render() {
         return (
             // add or remove classes depending if we are on full-screen-maps page or not
             <Navbar
-                color={this.props.location.pathname.indexOf('full-screen-maps') !== -1 ? "white":this.state.color} expand="lg"
+                color={this.props.location.pathname.indexOf('full-screen-maps') !== -1 ? "white" : this.state.color} expand="lg"
                 className={
                     this.props.location.pathname.indexOf('full-screen-maps') !== -1 ?
-                    "navbar-absolute fixed-top":"navbar-absolute fixed-top " + (this.state.color === "transparent" ? "navbar-transparent ":"")}>
+                        "navbar-absolute fixed-top" : "navbar-absolute fixed-top " + (this.state.color === "transparent" ? "navbar-transparent " : "")}>
                 <Container fluid>
                     <div className="navbar-wrapper">
                         <div className="navbar-toggle">
@@ -125,7 +125,7 @@ class Header extends React.Component{
                             <NavItem>
                                 <Link to="#pablo" className="nav-link">
                                     <i className="now-ui-icons media-2_sound-wave"></i>
-            						<p>
+                                    <p>
                                         <span className="d-lg-none d-md-block">Stats</span>
                                     </p>
                                 </Link>
@@ -134,8 +134,8 @@ class Header extends React.Component{
                                 <DropdownToggle caret nav>
                                     <i className="now-ui-icons location_world"></i>
                                     <p>
-            							<span className="d-lg-none d-md-block">Some Actions</span>
-            						</p>
+                                        <span className="d-lg-none d-md-block">Some Actions</span>
+                                    </p>
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem tag="a">Action</DropdownItem>

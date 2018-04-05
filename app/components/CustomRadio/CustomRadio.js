@@ -5,18 +5,18 @@ import {
 // used for making the prop types of this component
 import PropTypes from 'prop-types';
 
-class CustomRadio extends React.Component{
-    render(){
+class CustomRadio extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         var classes = "";
-        if(this.props.formGroupProps !== undefined){
-            if(this.props.formGroupProps.className !== undefined){
+        if (this.props.formGroupProps !== undefined) {
+            if (this.props.formGroupProps.className !== undefined) {
                 classes += " " + this.props.formGroupProps.className;
             }
         }
         return (
             <FormGroup check {...this.props.formGroupProps} className={"form-check-radio" + classes}>
                 <Label check {...this.props.labelProps}>
-                    <Input {...this.props.inputProps} type="radio"/>
+                    <Input {...this.props.inputProps} type="radio" />
                     <span className="form-check-sign"></span>
                     {this.props.label ? this.props.label : ""}
                 </Label>

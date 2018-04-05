@@ -3,14 +3,14 @@ import { Progress } from 'reactstrap';
 // used for making the prop types of this component
 import PropTypes from 'prop-types';
 
-class CustomProgress extends React.Component{
-    render(){
+class CustomProgress extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         const { badge, ...rest } = this.props;
-        return(
-            <div className={"progress-container"+(this.props.color !== undefined ? " progress-"+this.props.color:"")}>
-                {this.props.badge !== undefined ? (<span className="progress-badge">{this.props.badge}</span>):null}
+        return (
+            <div className={"progress-container" + (this.props.color !== undefined ? " progress-" + this.props.color : "")}>
+                {this.props.badge !== undefined ? (<span className="progress-badge">{this.props.badge}</span>) : null}
                 <Progress {...rest}>
-                    {this.props.value !== undefined ? (<span className="progress-value">{this.props.value}%</span>):null}
+                    {this.props.value !== undefined ? (<span className="progress-value">{this.props.value}%</span>) : null}
                 </Progress>
 
             </div>

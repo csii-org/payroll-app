@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 import { Button } from 'components';
 
-class CardSocials extends React.Component{
-    render(){
+class CardSocials extends React.Component { // eslint-disable-line react/prefer-stateless-function
+    render() {
         return (
             <div className="button-container">
                 {
-                    this.props.socials.map((prop,key) => {
+                    this.props.socials.map((prop, key) => {
                         return (
                             <Button neutral icon round size={this.props.size} key={key} href={prop.link}>
                                 <i className={prop.icon}></i>
@@ -24,7 +24,7 @@ class CardSocials extends React.Component{
 
 CardSocials.propTypes = {
     // size of all social buttons
-    size: PropTypes.oneOf(['sm','lg']),
+    size: PropTypes.oneOf(['sm', 'lg']),
     // example: [{icon: "name of icon", href="href of icon"},...]
     socials: PropTypes.arrayOf(PropTypes.object)
 }

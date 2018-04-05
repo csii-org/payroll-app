@@ -41,8 +41,6 @@ import Stats from './Stats/Stats';
 
 import Tasks from './Tasks/Tasks';
 
-import Timeline from './Timeline/Timeline';
-
 export {
     // Accordion
     Accordion,
@@ -87,6 +85,4 @@ export {
     Stats,
     // Tasks
     Tasks,
-    // Timeline
-    Timeline,
 };
