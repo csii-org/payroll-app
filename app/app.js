@@ -16,7 +16,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'assets/scss/now-ui-dashboard.css?v=1.0.1';
+import 'assets/scss/now-ui-dashboard.css?v=1.0.1'; // eslint-disable-line import/extensions
 import 'assets/css/demo.css';
 
 // Import root app
@@ -40,7 +40,7 @@ import 'file-loader?name=[name].[ext]!./.htaccess';
 import configureStore from './configureStore';
 
 // Import CSS reset and Global Styles
-//import './global-styles';
+// import './global-styles';
 
 // Create redux store with history
 const initialState = {};
