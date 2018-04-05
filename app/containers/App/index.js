@@ -14,16 +14,15 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-//import LoginPage from 'containers/LoginPage/Loadable';
-import Pages from 'containers/Pages/Loadable';
+import LoginPage from 'containers/LoginPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
   return (
     <div>
       <Switch>
-        <Redirect exact from="/" to="/pages" />
-        <Route path="/pages" component={Pages} />
+        <Redirect exact from="/" to="/login" />
+        <Route path="/login" component={LoginPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
