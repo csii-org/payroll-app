@@ -70,7 +70,7 @@ export default class LoginPage extends React.Component { // eslint-disable-line 
                       </CardBody>
                       <CardFooter className="text-right">
                         <CardLink color="info" className="pull-left" href="#">Forgot Password?</CardLink>
-                        <Button color="primary" size="lg" href="#">
+                        <Button color="primary" size="lg" href="/dashboard">
                           Sign In
                           </Button>
                       </CardFooter>
