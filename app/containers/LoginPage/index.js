@@ -10,12 +10,13 @@
  */
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardBody, CardFooter, CardLink, Container, Col, Form } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardFooter, CardLink, CardImg, Container, Col, Form } from 'reactstrap';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import { Button, FormInputs } from 'components';
 
 import bgImage from 'assets/img/bg14.jpg';
+import logoImage from 'assets/img/csi_logo.jpg';
 
 export default class LoginPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -42,11 +43,11 @@ export default class LoginPage extends React.Component { // eslint-disable-line 
               <div className="login-page">
                 <Container>
                   <Col xs={12} md={8} lg={4} className="ml-auto mr-auto">
-                    <Card className="card-signup">
-                      <CardHeader className="text-center">
-                        <CardTitle>Sign In</CardTitle>
+                    <Card className="card-login text-center">
+                      <CardHeader>
+                        <CardImg className="w-50 p-3" src={logoImage} alt="LOGO" />
                       </CardHeader>
-                      <CardBody>
+                      <CardBody className="text-left">
                         <Form>
                           <FormInputs
                             ncols={['col-12', 'col-12']}
