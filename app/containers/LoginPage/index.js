@@ -22,11 +22,11 @@ export default class LoginPage extends React.Component { // eslint-disable-line 
   constructor(props) {
     super(props);
     this.state = {};
-    this.fullPages = React.createRef();
+    //this.fullPages = React.createRef();
   }
   componentDidMount() {
     if (navigator.platform.indexOf('Win') > -1) {
-      this.ps = new PerfectScrollbar(this.fullPages);
+      this.ps = new PerfectScrollbar(this.refs.fullPages);
     }
   }
   componentWillUnmount() {
@@ -37,7 +37,7 @@ export default class LoginPage extends React.Component { // eslint-disable-line 
   render() {
     return (
       <div>
-        <div className="wrapper wrapper-full-page" ref={this.fullPages}>
+        <div className="wrapper wrapper-full-page" ref="fullPages">
           <div className="full-page section-image">
             <div className="full-page-content">
               <div className="login-page">

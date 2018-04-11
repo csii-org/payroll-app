@@ -15,7 +15,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import LoginPage from 'containers/LoginPage/Loadable';
-import Dashboard from 'containers/Dashboard/Loadable';
+import DashboardPage from 'containers/DashboardPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
       <Switch>
         <Redirect exact from="/" to="/login" />
         <Route path="/login" component={LoginPage} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={DashboardPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
