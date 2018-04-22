@@ -1,22 +1,17 @@
-/**
- * NotFoundPage
- *
- * This is the page we show when the user visits a url that doesn't have a route
- *
- * NOTE: while this component should technically be a stateless functional
- * component (SFC), hot reloading does not currently support SFCs. If hot
- * reloading is not a necessity for you then you can refactor it and remove
- * the linting exception.
- */
-
 import React from 'react';
+import {
+  Card, CardBody, CardTitle
+} from 'reactstrap';
+import { PanelHeader } from 'components';
 
 export default class Dashboard extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h3>
+      <div>
+        <div className="content">
         Page under construction.
-      </h3>
+        </div>
+      </div>
     );
   }
 }

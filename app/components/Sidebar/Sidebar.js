@@ -43,13 +43,11 @@ class Sidebar extends React.Component { // eslint-disable-line react/prefer-stat
   render() {
     return (
       <div>
-        <div className="sidebar" data-color="black">
+        <div className="sidebar" data-color="blue">
           <div className="logo">
-            <a href="/dashboard" className="simple-text logo-mini">
-              <div className="logo-img">
-                <img src={logo} alt="logo" />
-              </div>
-            </a>
+          <a href="/dashboard" className="simple-text logo-mini">
+                        CP
+              </a>
             <a href="/dashboard" className="simple-text logo-normal">
               CSII Portal
                 	</a>
